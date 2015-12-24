@@ -1,4 +1,4 @@
-package com.ylf.jucaipen.chatpop.activity.activity.message;
+package com.ylf.jucaipen.chatpop.activity.activity.more;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -29,7 +29,16 @@ public class MoreInfo extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         view=inflater.inflate(R.layout.ui_morelist,container,false);
         initView();
+        initData();
         return view;
+    }
+
+    private void initData() {
+        arrays.clear();
+        arrays.add("我的");
+        arrays.add("设置");
+        arrays.add("关于");
+        adapter.notifyDataSetChanged();
     }
 
     private void initView() {
